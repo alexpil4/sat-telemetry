@@ -6,7 +6,7 @@
 
 SAT Telemetry API is a system designed to simulate satellite telemetry for testing and development purposes. It provides an API to generate and process telemetry data, allowing developers to test their applications as if they were interacting with real satellite data.
 
-## Features
+## Features 🌟
 
 - **Satellite simulation**: Generates simulated telemetry data for testing.
 - **Real-time API**: Provides real-time telemetry data via API endpoints.
@@ -14,7 +14,7 @@ SAT Telemetry API is a system designed to simulate satellite telemetry for testi
 - **Customizable data**: Configure different telemetry parameters to fit testing needs.
 - **FastAPI-based**: Built with FastAPI for high performance and easy integration.
 
-## Installation
+## Local installation 💻
 
 To set up the project, follow these steps:
 
@@ -37,7 +37,17 @@ uvicorn app.main:app --reload
 - **Swagger UI** – Available at [`/swagger`](http://localhost:8000/swagger), ideal for a direct API ineraction.
 - **ReDoc** – Available at [`/redoc`](http://localhost:8000/redoc), ideal for understanding the API specifications.
 
-## Support
+## Docker installation 🐳
+1. Build the Docker Image
+```bash
+docker build -t sat-telemetry .
+```
+2. Run the Docker Container
+```bash
+docker run -p 8000:8000 sat-telemetry
+```
+
+## Support 💪
 
 If you find this project helpful and would like to support its development, you can make a donation via PayPal:
 
