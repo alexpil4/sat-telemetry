@@ -1,6 +1,7 @@
 # Satellite Monitoring API 🛰️
 
-![Demo GIF](https://media3.giphy.com/media/LByQRF0zWOAp7ymQ2Q/giphy.gif)
+![image](https://github.com/user-attachments/assets/0c3388a6-da56-4d4d-85d8-c0ba004ff642)
+
 
 
 SAT Telemetry API is a system designed to simulate satellite telemetry for testing and development purposes. It provides an API to generate and process telemetry data, allowing developers to test their applications as if they were interacting with real satellite data.
