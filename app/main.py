@@ -4,7 +4,9 @@ from app.routes import satellites, telemetry, alerts
 app = FastAPI(
     title="Satellite Monitoring API 🛰️",
     description="An API for monitoring satellite telemetry and alerts (mocks) in real-time.",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/swagger",
+    redoc_url="/redoc"
 )
 
 # Include the router within the app
