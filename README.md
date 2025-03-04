@@ -1,14 +1,17 @@
 # Satellite Monitoring API 🛰️
 
-SAT Telemetry is a project that collects and analyzes telemetry data from satellites, with the goal of monitoring the performance and operation of a satellite in real-time. The system gathers data from onboard sensors, processes it, and masks certain sensitive information to provide useful insights to engineers for maintaining the satellite's operations and troubleshooting any issues.
+![Demo GIF](https://media3.giphy.com/media/LByQRF0zWOAp7ymQ2Q/giphy.gif)
+
+
+SAT Telemetry API is a system designed to simulate satellite telemetry for testing and development purposes. It provides an API to generate and process telemetry data, allowing developers to test their applications as if they were interacting with real satellite data.
 
 ## Features
 
-- **Real-time monitoring**: View telemetry data from the satellite in real-time.
-- **Data collection**: Collects various types of data from sensors and onboard systems.
-- **Data masking**: Sensitive telemetry data is masked for privacy and security purposes.
-- **Processing and analysis**: Analyzes data to detect anomalies or performance issues.
-- **User interface**: Provides a graphical interface to visualize the data in an understandable way.
+- **Satellite simulation**: Generates simulated telemetry data for testing.
+- **Real-time API**: Provides real-time telemetry data via API endpoints.
+- **Data masking**: Simulated data can be masked for testing different scenarios.
+- **Customizable data**: Configure different telemetry parameters to fit testing needs.
+- **FastAPI-based**: Built with FastAPI for high performance and easy integration.
 
 ## Installation
 
