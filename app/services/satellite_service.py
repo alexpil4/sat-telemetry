@@ -35,7 +35,7 @@ def get_satellite_by_id(satellite_id: str):
     return satellites.get(satellite_id, None)
 
 # Satellites
-create_satellite("METEOR M2", "Operational")
-create_satellite("Sentinel-5P", "Operational")
-create_satellite("STARLINK-1130", "Operational")
-create_satellite("Sentinel-2A", "Operational")
+create_satellite("METEOR M2", "operational")
+create_satellite("Sentinel-5P", "operational")
+create_satellite("STARLINK-1130", "not operational")
+create_satellite("Sentinel-2A", "operational")
