@@ -21,6 +21,7 @@ class Telemetry(BaseModel):
     
 class Satellite(BaseModel):
     id: str
+    norad_id: int
     name: str
     status: str
     telemetry: Telemetry

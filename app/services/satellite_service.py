@@ -11,6 +11,7 @@ def create_satellite(name: str, status: str):
     satellites[satellite_id] = {
         "id": satellite_id,
         "name": name,
+        "norad_id": random.randint(10000, 40000),
         "status": status,
         "telemetry": {
             "id": satellite_id,
@@ -34,7 +35,7 @@ def get_satellite_by_id(satellite_id: str):
     return satellites.get(satellite_id, None)
 
 # Satellites
-create_satellite("Hubble Space Telescope", "Operational")
+create_satellite("METEOR M2", "Operational")
 create_satellite("Sentinel-5P", "Operational")
-create_satellite("ISS", "Operational")
+create_satellite("STARLINK-1130", "Operational")
 create_satellite("Sentinel-2A", "Operational")
