@@ -30,6 +30,7 @@ class Telemetry(BaseModel):
 class Satellite(BaseModel):
     id: str
     norad_id: int
+    orbit: str
     name: str
     status: str
     telemetry: Telemetry

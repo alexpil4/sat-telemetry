@@ -7,12 +7,25 @@ from datetime import datetime, timezone
 # DB mock
 satellites = {}
 
+def calculateOrbit(height: float):
+    if 160 <= height <= 2000:
+        return 'LEO'
+    elif 2000 < height < 35786:
+        return 'MEO'
+    elif height >= 35786:
+        return 'GEO'
+    else:
+        return 'OTHER'
+        
+
 def create_satellite(name: str, status: str):
     satellite_id = str(uuid.uuid4())
+    height = round(random.uniform(160, 35786), 2)
     satellites[satellite_id] = {
         "id": satellite_id,
         "name": name,
         "norad_id": random.randint(10000, 40000),
+        "orbit": calculateOrbit(height),
         "status": status,
         "telemetry": {
             "id": satellite_id,
@@ -27,7 +40,7 @@ def create_satellite(name: str, status: str):
                 "last_event_at": datetime.now(timezone.utc)
             },
             "position": {
-                "height": round(random.uniform(160, 2000), 2),
+                "height": height,
                 "latitude": round(random.uniform(-90, 90), 6),
                 "longitude": round(random.uniform(-180, 180), 6),
                 "last_updated": datetime.now(timezone.utc)
