@@ -8,7 +8,7 @@ SAT Telemetry API is a system designed to simulate satellite telemetry for testi
 
 ## Documentation 📖
 
-For more details about API data model, please visit the specific [Wiki](https://github.com/your-username/your-repository/wiki).
+For more details about API data model, please visit the specific [Wiki]([https://github.com/your-username/your-repository/wiki](https://github.com/alexpil4/sat-telemetry/wiki/Sat-Telemetry-API-Data-Model)).
 
 ## Features 🌟
 
