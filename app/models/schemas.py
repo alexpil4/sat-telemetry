@@ -4,6 +4,13 @@ import uuid
 
 
 # Pydantic schema model
+
+class Position(BaseModel):
+    height: float
+    latitude: float
+    longitude: float
+    last_updated: datetime
+    
 class PowerStatus(BaseModel):
     power_status: str
     last_power_status_at: datetime
@@ -18,6 +25,7 @@ class Telemetry(BaseModel):
     temperature_c: float
     power_status: PowerStatus
     last_event: LastEvent
+    position: Position
     
 class Satellite(BaseModel):
     id: str

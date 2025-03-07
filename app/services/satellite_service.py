@@ -1,7 +1,8 @@
 import random
 import uuid
+import threading
 from datetime import datetime, timezone
-from app.models.schemas import Satellite
+
 
 # DB mock
 satellites = {}
@@ -24,9 +25,22 @@ def create_satellite(name: str, status: str):
             "last_event": {
                 "last_event": random.choice(["Solar Flare Detected", "Thruster Adjustment", "System Check Complete"]),
                 "last_event_at": datetime.now(timezone.utc)
+            },
+            "position": {
+                "height": round(random.uniform(160, 2000), 2),
+                "latitude": round(random.uniform(-90, 90), 6),
+                "longitude": round(random.uniform(-180, 180), 6),
+                "last_updated": datetime.now(timezone.utc)
             }
         }
     }
+    
+def update_satellite_positions():
+    for satellite in satellites.values():
+        satellite["telemetry"]["position"]["latitude"] = round(random.uniform(-90, 90), 6)
+        satellite["telemetry"]["position"]["longitude"] = round(random.uniform(-180, 180), 6)
+        satellite["telemetry"]["position"]["last_updated"] = datetime.now(timezone.utc)
+    threading.Timer(5.0, update_satellite_positions).start() # 5 sec
 
 def get_all_satellites():
     return list(satellites.values())
@@ -39,3 +53,6 @@ create_satellite("METEOR M2", "operational")
 create_satellite("Sentinel-5P", "operational")
 create_satellite("STARLINK-1130", "not operational")
 create_satellite("Sentinel-2A", "operational")
+
+# Update satellite position
+update_satellite_positions()
