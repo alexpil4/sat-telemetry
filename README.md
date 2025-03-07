@@ -23,16 +23,14 @@ For more details about API data model, please visit the specific [Wiki](https://
 
 To set up the project, follow these steps:
 
-1. Install dependencies
-Make sure you have Python 3.x installed, then install the required dependencies:
+1. Make sure you have Python 3.x installed, then install the required dependencies:
 
 ```bash
 cd sat-telemetry
 pip install -r requirements.txt
 ```
 
-2. Run the project
-After installing the dependencies, you can run the telemetry API with:
+2. After installing the dependencies, you can run the telemetry API with:
 ```bash
 uvicorn app.main:app --reload
 ```
