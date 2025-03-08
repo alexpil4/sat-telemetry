@@ -30,7 +30,7 @@ def create_satellite(name: str, status: str):
         "telemetry": {
             "id": satellite_id,
             "velocity_kms": round(random.uniform(7.5, 8.0), 2),
-            "temperature_c": round(random.uniform(-100, 50), 1),
+            "temperature_c": round(random.uniform(-80, 80), 2),
             "power_status": {
                 "power_status": random.choice(["Nominal", "Low Power", "Critical"]),
                 "last_power_status_at": datetime.now(timezone.utc)
