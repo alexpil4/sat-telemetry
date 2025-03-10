@@ -22,3 +22,7 @@ def create_new_alert(alert: Alert):
 
 def get_all_alerts():
     return list(alerts.values())
+
+def get_alerts_by_satellite_id(satellite_id: str):
+    satellite_alerts = [alert for alert in alerts.values() if alert["satellite_id"] == satellite_id]
+    return satellite_alerts if satellite_alerts else None
