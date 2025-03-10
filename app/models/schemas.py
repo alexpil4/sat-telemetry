@@ -10,7 +10,7 @@ class SignalHistory(BaseModel):
     signal_power: float
     signal_noise_ratio: float
     frequency_mhz: float
-    timestamp: datetime
+    last_signal_update: datetime
 class Signal(BaseModel): 
     signal_power: float
     signal_noise_ratio: float
@@ -54,6 +54,7 @@ class Alert(BaseModel):
     satellite_id: str
     issue: str
     severity: str
+    created_at: datetime
     
 class AlertResponse(BaseModel):
     message: str

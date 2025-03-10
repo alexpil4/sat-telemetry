@@ -76,7 +76,7 @@ def update_satellite_data():
             "signal_power": satellite["telemetry"]["signal"]["signal_power"],
             "signal_noise_ratio": satellite["telemetry"]["signal"]["signal_noise_ratio"],
             "frequency_mhz": satellite["telemetry"]["signal"]["frequency_mhz"],
-            "timestamp": datetime.now(timezone.utc)
+            "last_signal_update": datetime.now(timezone.utc)
         }
         
         # Add new slot to history
