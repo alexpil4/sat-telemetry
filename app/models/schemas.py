@@ -1,9 +1,22 @@
 from pydantic import BaseModel, Field
 from datetime import datetime
+from typing import List
 import uuid
 
 
 # Pydantic schema model
+
+class SignalHistory(BaseModel):
+    signal_power: float
+    signal_noise_ratio: float
+    frequency_mhz: float
+    timestamp: datetime
+class Signal(BaseModel): 
+    signal_power: float
+    signal_noise_ratio: float
+    frequency_mhz: float
+    last_signal_update: datetime
+    signal_history: List[SignalHistory]
 
 class Position(BaseModel):
     height: float
@@ -26,6 +39,7 @@ class Telemetry(BaseModel):
     power_status: PowerStatus
     last_event: LastEvent
     position: Position
+    signal: Signal
     
 class Satellite(BaseModel):
     id: str
