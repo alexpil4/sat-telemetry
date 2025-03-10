@@ -54,9 +54,12 @@ def create_satellite(name: str, status: str):
             }
         }
     }
-# Mock the data generation for position and signal
+# Mock the data generation for position, speed and signal
 def update_satellite_data():
     for satellite in satellites.values():
+        # Speed
+        satellite["telemetry"]["velocity_kms"] = round(random.uniform(7.5, 8.0), 2)
+        
         # Position
         satellite["telemetry"]["position"]["latitude"] = round(random.uniform(-90, 90), 6)
         satellite["telemetry"]["position"]["longitude"] = round(random.uniform(-180, 180), 6)
